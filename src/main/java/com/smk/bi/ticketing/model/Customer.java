@@ -11,18 +11,18 @@ import javax.persistence.Table;
  */
 // Nama Fitrah Elly Firdaus
 // NIS 2134664
-  @Entity
-  @Table(name = "customer")
+@Entity
+@Table(name = "customer")
 public class Customer {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerId;
-    private String customerName;
-    private String customerAddress;
-    private String customerEmail;
-    private String identityNumber;
-    private String customerPhoneNumber;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long customerId;
+  private String customerName;
+  private String customerAddress;
+  private String customerEmail;
+  private String identityNumber;
+  private String customerPhoneNumber;
 
   public Long getCustomerId() {
     return customerId;
@@ -70,5 +70,17 @@ public class Customer {
 
   public void setCustomerPhoneNumber(String customerPhoneNumber) {
     this.customerPhoneNumber = customerPhoneNumber;
+  }
+
+  @Override
+  public String toString() {
+    return "Customer{" +
+        "customerId=" + customerId +
+        ", customerName='" + customerName + '\'' +
+        ", customerAddress='" + customerAddress + '\'' +
+        ", customerEmail='" + customerEmail + '\'' +
+        ", identityNumber='" + identityNumber + '\'' +
+        ", customerPhoneNumber='" + customerPhoneNumber + '\'' +
+        '}';
   }
 }
